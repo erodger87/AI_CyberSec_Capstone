@@ -32,4 +32,5 @@ WORKDIR /app/vulnerable_archive
 EXPOSE 8000
 
 # Run Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+USER non-rootCMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]  
+#03/21/2026 5:33pm  Added 'USER non-root' to code to prevent possible access to root
